@@ -2,8 +2,8 @@ import './App.css';
 import React, { useState, useRef } from "react";
 import firebase from "firebase/compat/app";
 import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
-
-import ChatRoom from './components/ChatRoom/index'
+import SignIn from './components/SignIn';
+import ChatRoom from './components/ChatRoom/index';
 
 
 firebase.initializeApp({
@@ -17,7 +17,7 @@ firebase.initializeApp({
 })
 
   const auth = firebase.auth();
-   const firestore = firebase.firestore(); 
+  const firestore = firebase.firestore(); 
 
 function App() {
 
@@ -25,16 +25,7 @@ function App() {
   const [user] = useAuthState(auth);
 
 
-  function SignIn() {
-    const signInWithGoogle = () => {
-      const provider = new firebase.auth.GoogleAuthProvider();
-      auth.signInWithPopup(provider);
-    }
   
-    return (
-      <button onClick={signInWithGoogle}>Sign In</button>
-    )
-  }
   
   function SignOut() {
     return auth.currentUser && (
