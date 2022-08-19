@@ -4,6 +4,9 @@ import firebase from "firebase/compat/app";
 
 function SignIn() {
     const signInWithGoogle = () => {
+
+    const auth = firebase.auth();
+
       const provider = new firebase.auth.GoogleAuthProvider();
       auth.signInWithPopup(provider);
     }

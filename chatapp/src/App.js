@@ -25,22 +25,7 @@ function App() {
   const [user] = useAuthState(auth);
 
 
-  
-  
-  function SignOut() {
-    return auth.currentUser && (
-  
-      <button onClick={() => auth.signOut()}>Sign out</button>
-    )
-  }
-
-
-  
-  
-  
-  
-  
-  return (
+return (
     <div className="App">
      <header>
 
