@@ -1,9 +1,10 @@
 import './App.css';
 import React, { useState, useRef } from "react";
 import firebase from "firebase/compat/app";
-import { useAuthState, useSignInWithGoogle } from "react-firebase-hooks/auth";
+import { useAuthState } from "react-firebase-hooks/auth";
 import SignIn from './components/SignIn';
 import ChatRoom from './components/ChatRoom/index';
+import SignOut from './components/SignOut/index';
 
 
 firebase.initializeApp({
@@ -28,7 +29,8 @@ function App() {
 return (
     <div className="App">
      <header>
-
+      <h1>ChatApp</h1>
+      <SignOut />
      </header>
 
      <section>
