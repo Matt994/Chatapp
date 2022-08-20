@@ -15,7 +15,7 @@ function ChatRoom() {
     const dummy = useRef();
   
     const messagesRef = firestore.collection('messages');
-    const query = messagesRef.orderBy('createdAt').limit(25);
+    const query = messagesRef.orderBy('createdAt').limit(50);
   
     const [messages] = useCollectionData(query, {idField: 'id'});
 
@@ -48,9 +48,9 @@ function ChatRoom() {
 
         <form onSubmit={sendMessage}>
 
-          <input value={formValue} onChange={(e) => setFormValue(e.target.value)}/>
+          <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="Type here"></input>
 
-          <button type='submit'>Send</button>
+          <button type='submit'><i class="fas fa-paper-plane"/></button>
         </form>
       </>
     )

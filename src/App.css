@@ -4,7 +4,7 @@ body {
 
 .App {
   text-align: center;
-  max-width: 728px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
@@ -15,7 +15,7 @@ body {
   color: white;
   position: fixed;
   width: 100%;
-  max-width: 728px;
+  max-width: 100%;
   top: 0;
   display: flex;
   align-items: center;
@@ -30,7 +30,7 @@ body {
   flex-direction: column;
   justify-content: center;
   min-height: 100vh;
-  background-color: rgb(40, 37, 53);
+  background-color: rgb(34, 25, 61);
 }
 
 main {
@@ -55,19 +55,22 @@ main::-webkit-scrollbar-thumb {
 }
 
 form {
-  height: 10vh;
+  height: 6vh;
   position: fixed;
   bottom: 0;
-  background-color: rgb(24, 23, 23);
+  background-color: rgb(0, 0, 0);
   width: 100%;
-  max-width: 728px;
+  max-width: 100%;
   display: flex;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 form button {
-  width: 20%;
-  background-color: rgb(56, 56, 143);
+  width: 15%;
+  background-color: rgb(255, 255, 255);
+  font-size: 1.8rem;
+  border: 1px solid transparent;
+  border-radius: 0px 10px 10px 0px;
 }
 
 
@@ -75,23 +78,24 @@ input {
   line-height: 1.5;
   width: 100%;
   font-size: 1.5rem;
-  background: rgb(58, 58, 58);
-  color: white;
+  background: rgb(255, 255, 255);
+  color: rgb(15, 15, 15);
   outline: none;
-  border: none;
+  border: 1px solid transparent;
+  border-radius: 10px 0px 0px 10px;
   padding: 0 10px;
 }
 
 button {
-  background-color: #282c34; /* Green */
+  background-color: #1854ce; 
   border: none;
-  color: white;
-  padding: 15px 32px;
+  color: rgb(0, 0, 0);
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
-  font-size: 1.25rem;
+  font-size: 1rem;
 }
 
 button:disabled {
